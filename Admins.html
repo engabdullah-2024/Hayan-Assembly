@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Registered Students</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+    <header class="p-4 bg-blue-600 text-white">
+        <h1 class="text-2xl font-bold text-center">Hayaan Assembly - Admin</h1>
+        <nav class="mt-2 flex justify-center space-x-4">
+            <a href="index.html" class="text-white">Home</a>
+            <a href="Registraions.html" class="text-white">Register</a>
+            <a href="Admins.html" class="text-white">Admin</a>
+        </nav>
+    </header>
+
+    <main class="mt-10 p-6 max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold">Registered Students</h2>
+        
+        <!-- Responsive Table Container -->
+        <div class="overflow-x-auto">
+            <table class="mt-4 w-full border border-gray-300 table-fixed">
+                <thead>
+                    <tr>
+                        <th class="border border-gray-300 p-2">Full Name</th>
+                        <th class="border border-gray-300 p-2">Program Type</th>
+                        <th class="border border-gray-300 p-2">Date</th>
+                        <th class="border border-gray-300 p-2">Time</th>
+                        <th class="border border-gray-300 p-2">Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="studentList">
+                    <!-- Dynamic rows will be added here -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Update Form -->
+        <h2 class="mt-10 text-2xl font-bold">Update Student</h2>
+        <form id="updateForm" class="mt-4 space-y-4">
+            <input type="hidden" id="updateIndex" />
+            <input type="text" id="updateName" placeholder="Full Name" required class="border p-2 w-full" />
+            <select id="updateProgramType" class="border p-2 w-full">
+                <option value="">Select Program Type</option>
+                <option value="Xiriiriye">Xiriiriye</option>
+                <option value="Quran 1">Quran 1</option>
+                <option value="Xadiis">Xadiis</option>
+                <option value="Maahmaah">Maahmaah</option>
+                <option value="Gabay">Gabay</option>
+                <option value="Waqti Nasiib">Waqti Nasiib</option>
+                <option value="Lecture">Lecture</option>
+                <option value="Su'aalo">Su'aalo</option>
+                <option value="Quran 2">Quran 2</option>
+            </select>
+            <input type="date" id="updateDate" required class="border p-2 w-full" />
+            <input type="time" id="updateTime" required class="border p-2 w-full" />
+            <button type="submit" class="bg-blue-600 text-white px-4 py-2 w-full">Update</button>
+        </form>
+    </main>
+
+    <footer class="mt-20 p-4 bg-gray-200 text-center">
+        <p>&copy; 2024 Hayaan  Assembly. All rights reserved.</p>
+    </footer>
+
+    <script src="admins.js"></script>
+</body>
+</html>
